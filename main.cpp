@@ -152,7 +152,7 @@ int main(int argc, char* argv[]) {
     try {
         int n = std::stoi(argv[1]);
         if (n <= 0) {
-            std::cerr << "The number of queens must be greater than 0" << std::endl;
+            std::cerr << "The sudoku size must be greater than 0" << std::endl;
             exit(1);
         }
 
@@ -168,10 +168,6 @@ int main(int argc, char* argv[]) {
             exit(1);
         }
 
-        /*for (int i = 0; i < ITERATIONS; i++) {
-            GeneticAlgorithm ga(size_of_generations, n, mutation_rate, sudoku3x3_57);
-            ga.run();
-        }*/
         GeneticAlgorithm ga(size_of_generations, n, mutation_rate, sudoku3x3_43);
         ga.run();
 
